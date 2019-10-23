@@ -1,20 +1,33 @@
 {
   "name": "austere",
-  "bsc-flags": ["-w", "-27"],
-  "warnings": {
-    "number": "-40+6+7-26-27+32..39-28-44+45",
-    "error": "+8",
-  },
+  "bsc-flags": [
+    "-bs-no-version-header",
+    "-bs-super-errors"
+  ],
   "sources": [
     "src",
-    {"dir": "test", "type": "dev"}
+    {
+      "dir": "test",
+      "type": "dev"
+    }
   ],
-  "entries": [{
-    "backend": "native",
-    "main-module": "Test"
-  }, {
-    "backend": "js",
-    "main-module": "Test"
-  }],
-  "refmt": 3,
+  "package-specs": {
+    "module": "commonjs",
+    "in-source": true
+  },
+  "suffix": ".bs.js",
+  "entries": [
+    {
+      "backend": "native",
+      "main-module": "Test"
+    },
+    {
+      "backend": "js",
+      "main-module": "Test"
+    }
+  ],
+  "warnings": {
+    "error": "+101"
+  },
+  "refmt": 3
 }

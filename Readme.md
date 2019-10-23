@@ -3,6 +3,8 @@
 A no-frills cli argument parser for reason. Forked from [minimist.re](https://github.com/jaredly/minimist.re), 
 which is inspired by [minimist](https://www.npmjs.com/package/minimist) and [yargs](https://www.npmjs.com/package/yargs).
 
+Unlike [minimist.re](https://github.com/jaredly/minimist.re), this only targets Javascript/Node and has no bs-native dependency.
+
 
 ```reason
 let parse = Austere.parse(~alias=[("h", "help")], ~presence=["help"], ~multi=["rename"], ~strings=["base"]);

@@ -21,3 +21,4 @@ ios/Build
 *.xcuserdatad
 android/local.properties
 keystore.properties
+.bs.js

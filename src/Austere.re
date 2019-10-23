@@ -188,3 +188,16 @@ let report = err =>
   | `BadValue(arg, typ) => "Need a " ++ typ ++ " value for argument " ++ arg
   | `Unknown(name) => "Unexpected argument: " ++ name
   };
+
+let fail = msg => {
+  Js.log(msg);
+  exit(1);
+};
+
+let getParamOrFail = (map, key) =>
+  get(map, key)
+      |> (
+          fun
+          | Some((value)) => value
+          | None =>  fail("Could not get required parameter " ++ key)
+        );
