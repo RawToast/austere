@@ -1,5 +1,5 @@
 {
-  "name": "austere.re",
+  "name": "austere",
   "bsc-flags": ["-w", "-27"],
   "warnings": {
     "number": "-40+6+7-26-27+32..39-28-44+45",

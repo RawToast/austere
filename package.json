@@ -1,5 +1,5 @@
 {
-  "name": "austere.re",
+  "name": "austere",
   "version": "0.0.5",
   "scripts": {
     "start": "bsb -make-world -w",
