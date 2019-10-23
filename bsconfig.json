@@ -5,7 +5,9 @@
     "-bs-super-errors"
   ],
   "sources": [
-    "src",
+    {
+      "dir": "src"
+    },
     {
       "dir": "test",
       "type": "dev"

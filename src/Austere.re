@@ -196,8 +196,8 @@ let fail = msg => {
 
 let getParamOrFail = (map, key) =>
   get(map, key)
-      |> (
-          fun
-          | Some((value)) => value
-          | None =>  fail("Could not get required parameter " ++ key)
-        );
+  |> (
+    fun
+    | Some(value) => value
+    | None => fail("Could not get required parameter " ++ key)
+  );
