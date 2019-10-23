@@ -4,7 +4,7 @@
   "scripts": {
     "start": "bsb -make-world -w",
     "build": "bsb -make-world",
-    "test": "./lib/bs/native/test.native --verbose ./test",
+    "test": "node test/*",
     "lint": "bsrefmt src/* --in-place",
     "clean": "bsb -clean-world"
   },
