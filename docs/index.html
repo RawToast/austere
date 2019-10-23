@@ -22,43 +22,43 @@
       <div class='docs-listing'><a href="./index.html">Home</a></div>
       <div class='table-of-contents'>
       <div class='toc-header'>Page Contents</div>
-      <a href="#minimist.re" class='level-1 header'>Minimist.re</a>
+      <a href="#austere.re" class='level-1 header'>Austere.re</a>
 <a href="#example-usage" class='level-2 header'>Example usage</a>
       </div>
-      <div class='project-listing'><div class='project-title'>Package modules</div><a href="./api/Minimist.html">Minimist</a>
+      <div class='project-listing'><div class='project-title'>Package modules</div><a href="./api/Austere.html">Austere</a>
 <a href="./api/Test.html">Test</a></div>
     </div>
     </div>
   
     <div class='main'>
-    <a href="https://github.com/jaredly/minimist.re/blob/master/docs/./index.md" class="edit-link">Edit</a>
-    <a href="#minimist.re" id="minimist.re"><h1>Minimist.re</h1></a>
+    <a href="https://github.com/jaredly/austere.re/blob/master/docs/./index.md" class="edit-link">Edit</a>
+    <a href="#austere.re" id="austere.re"><h1>Austere.re</h1></a>
 
-<p>A no-frills cli argument parser for reason, inspired by <a href="https://www.npmjs.com/package/minimist" target="_blank" rel="noopener nofollow" title="" class="external-link">minimist</a> and <a href="https://www.npmjs.com/package/yargs" target="_blank" rel="noopener nofollow" title="" class="external-link">yargs</a>.</p>
+<p>A no-frills cli argument parser for reason, inspired by <a href="https://www.npmjs.com/package/austere" target="_blank" rel="noopener nofollow" title="" class="external-link">austere</a> and <a href="https://www.npmjs.com/package/yargs" target="_blank" rel="noopener nofollow" title="" class="external-link">yargs</a>.</p>
 <a href="#example-usage" id="example-usage"><h2>Example usage</h2></a><p>(from <a href="https://www.npmjs.com/package/pack.re" target="_blank" rel="noopener nofollow" title="" class="external-link">pack.re</a>):</p>
 <pre class='code'><code>let <span class='pattern-ident' data-type="(
-    ~?bools: option(list(Minimist.StrSet.elt)),
-    ~?floats: option(list(Minimist.StrSet.elt)),
-    ~?ints: option(list(Minimist.StrSet.elt)),
+    ~?bools: option(list(Austere.StrSet.elt)),
+    ~?floats: option(list(Austere.StrSet.elt)),
+    ~?ints: option(list(Austere.StrSet.elt)),
     list(string)
-) => Minimist.result(
-    Minimist.opts,
-    [&gt; `BadValue of Minimist.StrSet.elt * string
- | `Unknown of Minimist.StrSet.elt ]
+) => Austere.result(
+    Austere.opts,
+    [&gt; `BadValue of Austere.StrSet.elt * string
+ | `Unknown of Austere.StrSet.elt ]
 )">parse</span> = <span class='ident' data-type="(
-    ~?alias: option(list((string, Minimist.StrSet.elt))),
-    ~?presence: option(list(Minimist.StrSet.elt)),
-    ~?bools: option(list(Minimist.StrSet.elt)),
-    ~?floats: option(list(Minimist.StrSet.elt)),
-    ~?ints: option(list(Minimist.StrSet.elt)),
-    ~?strings: option(list(Minimist.StrSet.elt)),
-    ~?multi: option(list(Minimist.StrSet.elt)),
+    ~?alias: option(list((string, Austere.StrSet.elt))),
+    ~?presence: option(list(Austere.StrSet.elt)),
+    ~?bools: option(list(Austere.StrSet.elt)),
+    ~?floats: option(list(Austere.StrSet.elt)),
+    ~?ints: option(list(Austere.StrSet.elt)),
+    ~?strings: option(list(Austere.StrSet.elt)),
+    ~?multi: option(list(Austere.StrSet.elt)),
     list(string)
-) => Minimist.result(
-    Minimist.opts,
-    [&gt; `BadValue of Minimist.StrSet.elt * string
- | `Unknown of Minimist.StrSet.elt ]
-)">Minimist.parse</span>(~alias=[<span data-type="list((string, Minimist.StrSet.elt))">(<span class='string' data-type="string">&quot;h&quot;</span>, <span class='string' data-type="Minimist.StrSet.elt">&quot;help&quot;</span>)</span>], ~presence=[<span data-type="list(Minimist.StrSet.elt)"><span class='string' data-type="Minimist.StrSet.elt">&quot;help&quot;</span></span>], ~multi=[<span data-type="list(Minimist.StrSet.elt)"><span class='string' data-type="Minimist.StrSet.elt">&quot;rename&quot;</span></span>], ~strings=[<span data-type="list(Minimist.StrSet.elt)"><span class='string' data-type="Minimist.StrSet.elt">&quot;base&quot;</span></span>]);
+) => Austere.result(
+    Austere.opts,
+    [&gt; `BadValue of Austere.StrSet.elt * string
+ | `Unknown of Austere.StrSet.elt ]
+)">Austere.parse</span>(~alias=[<span data-type="list((string, Austere.StrSet.elt))">(<span class='string' data-type="string">&quot;h&quot;</span>, <span class='string' data-type="Austere.StrSet.elt">&quot;help&quot;</span>)</span>], ~presence=[<span data-type="list(Austere.StrSet.elt)"><span class='string' data-type="Austere.StrSet.elt">&quot;help&quot;</span></span>], ~multi=[<span data-type="list(Austere.StrSet.elt)"><span class='string' data-type="Austere.StrSet.elt">&quot;rename&quot;</span></span>], ~strings=[<span data-type="list(Austere.StrSet.elt)"><span class='string' data-type="Austere.StrSet.elt">&quot;base&quot;</span></span>]);
 
 let <span class='pattern-ident' data-type="string">help</span> = <span class='string' data-type="string">{|
 # pack.re - a simple js bundler for reason
@@ -74,8 +74,8 @@ Usage: pack.re [options] entry-file.js &gt; bundle.js
 |}</span>;
 
 let <span class='pattern-ident' data-type="string => 'a">fail</span> = (<span class='pattern-ident' data-type="string">msg</span>) =&gt; {
-  <span class='ident' data-type="string => unit">print_endline</span>(<span class='ident' data-type="string">msg</span>);
-  <span class='ident' data-type="string => unit">print_endline</span>(<span class='ident' data-type="string">help</span>);
+  <span class='ident' data-type="string => unit">Js.log</span>(<span class='ident' data-type="string">msg</span>);
+  <span class='ident' data-type="string => unit">Js.log</span>(<span class='ident' data-type="string">help</span>);
   <span class='ident' data-type="int => 'a">exit</span>(<span class='int' data-type="int">1</span>);
 };
 
@@ -84,39 +84,39 @@ let <span class='pattern-ident' data-type="list(string)">args</span> = <span cla
 let <span class='pattern-ident' data-type="list(string)">args</span> = [<span data-type="list(string)"><span class='string' data-type="string">&quot;--base&quot;</span>, <span data-type="list(string)"><span class='string' data-type="string">&quot;awesome&quot;</span>, <span data-type="list(string)"><span class='string' data-type="string">&quot;some-entry.js&quot;</span></span></span></span>];
 
 switch (<span class='ident' data-type="(
-    ~?bools: option(list(Minimist.StrSet.elt)),
-    ~?floats: option(list(Minimist.StrSet.elt)),
-    ~?ints: option(list(Minimist.StrSet.elt)),
+    ~?bools: option(list(Austere.StrSet.elt)),
+    ~?floats: option(list(Austere.StrSet.elt)),
+    ~?ints: option(list(Austere.StrSet.elt)),
     list(string)
-) => Minimist.result(
-    Minimist.opts,
-    [&gt; `BadValue of Minimist.StrSet.elt * string
- | `Unknown of Minimist.StrSet.elt ]
+) => Austere.result(
+    Austere.opts,
+    [&gt; `BadValue of Austere.StrSet.elt * string
+ | `Unknown of Austere.StrSet.elt ]
 )">parse</span>(<span class='ident' data-type="list(string)">args</span>)) {
-| <span class='pattern-constructor' data-type="Minimist.result(
-    Minimist.opts,
-    [&gt; `BadValue of Minimist.StrSet.elt * string
- | `Unknown of Minimist.StrSet.elt ]
-)">Minimist.Error</span>(<span class='pattern-ident' data-type="[&gt; `BadValue of Minimist.StrSet.elt * string
- | `Unknown of Minimist.StrSet.elt ]">err</span>) =&gt; <span class='ident' data-type="string => unit">fail</span>(<span class='ident' data-type="[ `BadValue of Minimist.StrSet.elt * string | `Unknown of Minimist.StrSet.elt ] => string">Minimist.report</span>(<span class='ident' data-type="[ `BadValue of Minimist.StrSet.elt * string | `Unknown of Minimist.StrSet.elt ]">err</span>))
-| <span class='pattern-constructor' data-type="Minimist.result(
-    Minimist.opts,
-    [&gt; `BadValue of Minimist.StrSet.elt * string
- | `Unknown of Minimist.StrSet.elt ]
-)">Ok</span>(<span class='pattern-ident' data-type="Minimist.opts">opts</span>) =&gt;
-if (<span class='ident' data-type="(Minimist.StrSet.elt, Minimist.StrSet.t) => bool">Minimist.StrSet.mem</span>(<span class='string' data-type="Minimist.StrSet.elt">&quot;help&quot;</span>, <span class='ident' data-type="Minimist.opts">opts</span>.<span class='field' data-type="Minimist.StrSet.t">presence</span>)) {
-  <span class='ident' data-type="string => unit">print_endline</span>(<span class='ident' data-type="string">help</span>); <span class='ident' data-type="int => unit">exit</span>(<span class='int' data-type="int">0</span>);
-} else switch (<span class='ident' data-type="Minimist.opts">opts</span>.<span class='field' data-type="list(string)">rest</span>) {
+| <span class='pattern-constructor' data-type="Austere.result(
+    Austere.opts,
+    [&gt; `BadValue of Austere.StrSet.elt * string
+ | `Unknown of Austere.StrSet.elt ]
+)">Austere.Error</span>(<span class='pattern-ident' data-type="[&gt; `BadValue of Austere.StrSet.elt * string
+ | `Unknown of Austere.StrSet.elt ]">err</span>) =&gt; <span class='ident' data-type="string => unit">fail</span>(<span class='ident' data-type="[ `BadValue of Austere.StrSet.elt * string | `Unknown of Austere.StrSet.elt ] => string">Austere.report</span>(<span class='ident' data-type="[ `BadValue of Austere.StrSet.elt * string | `Unknown of Austere.StrSet.elt ]">err</span>))
+| <span class='pattern-constructor' data-type="Austere.result(
+    Austere.opts,
+    [&gt; `BadValue of Austere.StrSet.elt * string
+ | `Unknown of Austere.StrSet.elt ]
+)">Ok</span>(<span class='pattern-ident' data-type="Austere.opts">opts</span>) =&gt;
+if (<span class='ident' data-type="(Austere.StrSet.elt, Austere.StrSet.t) => bool">Austere.StrSet.mem</span>(<span class='string' data-type="Austere.StrSet.elt">&quot;help&quot;</span>, <span class='ident' data-type="Austere.opts">opts</span>.<span class='field' data-type="Austere.StrSet.t">presence</span>)) {
+  <span class='ident' data-type="string => unit">Js.log</span>(<span class='ident' data-type="string">help</span>); <span class='ident' data-type="int => unit">exit</span>(<span class='int' data-type="int">0</span>);
+} else switch (<span class='ident' data-type="Austere.opts">opts</span>.<span class='field' data-type="list(string)">rest</span>) {
   | <span class='pattern-constructor' data-type="list(string)">[]</span> =&gt; <span class='ident' data-type="string => unit">fail</span>(<span class='string' data-type="string">&quot;Expected entry file as final argument&quot;</span>)
   | [<span data-type="list(string)"><span class='pattern-ident' data-type="string">entry</span></span>] =&gt; {
-    let <span class='pattern-ident' data-type="option(string)">base</span> = <span class='ident' data-type="(Minimist.StrMap.t(string), Minimist.StrMap.key) => option(
+    let <span class='pattern-ident' data-type="option(string)">base</span> = <span class='ident' data-type="(Austere.StrMap.t(string), Austere.StrMap.key) => option(
     string
-)">Minimist.get</span>(<span class='ident' data-type="Minimist.opts">opts</span>.<span class='field' data-type="Minimist.StrMap.t(string)">strings</span>, <span class='string' data-type="Minimist.StrMap.key">&quot;base&quot;</span>);
+)">Austere.get</span>(<span class='ident' data-type="Austere.opts">opts</span>.<span class='field' data-type="Austere.StrMap.t(string)">strings</span>, <span class='string' data-type="Austere.StrMap.key">&quot;base&quot;</span>);
     let <span class='pattern-ident' data-type="list(string)">renames</span> = <span class='ident' data-type="(
-    Minimist.StrMap.t(list(string)),
-    Minimist.StrMap.key
-) => list(string)">Minimist.multi</span>(<span class='ident' data-type="Minimist.opts">opts</span>.<span class='field' data-type="Minimist.StrMap.t(list(string))">multi</span>, <span class='string' data-type="Minimist.StrMap.key">&quot;rename&quot;</span>);
-    <span class='ident' data-type="string => unit">print_endline</span>(<span class='string' data-type="string">&quot;All good!&quot;</span>)
+    Austere.StrMap.t(list(string)),
+    Austere.StrMap.key
+) => list(string)">Austere.multi</span>(<span class='ident' data-type="Austere.opts">opts</span>.<span class='field' data-type="Austere.StrMap.t(list(string))">multi</span>, <span class='string' data-type="Austere.StrMap.key">&quot;rename&quot;</span>);
+    <span class='ident' data-type="string => unit">Js.log</span>(<span class='string' data-type="string">&quot;All good!&quot;</span>)
   }
   | _ =&gt; <span class='ident' data-type="string => unit">fail</span>(<span class='string' data-type="string">&quot;Only one entry file allowed&quot;</span>)
 }

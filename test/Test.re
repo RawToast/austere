@@ -1,5 +1,5 @@
 
-open Minimist;
+open Austere;
 
 let tests = ref(0);
 let failures = ref(0);
@@ -7,7 +7,7 @@ let failures = ref(0);
 let ensure = (bool, message) => {
   tests := tests^ + 1;
   if (!bool) {
-    print_endline("Failed: " ++ message);
+    Js.log("Failed: " ++ message);
     failures := failures^ + 1;
   };
 };
@@ -15,15 +15,15 @@ let ensure = (bool, message) => {
 let report = () => {
   print_newline();
   if (failures^ == 0) {
-    print_endline("Success! All " ++ string_of_int(tests^) ++ " tests passed");
+    Js.log("Success! All " ++ string_of_int(tests^) ++ " tests passed");
     exit(0);
   } else {
-    print_endline("Failures: " ++ string_of_int(failures^) ++ " / " ++ string_of_int(tests^));
+    Js.log("Failures: " ++ string_of_int(failures^) ++ " / " ++ string_of_int(tests^));
     exit(1);
   }
 };
 
-let parse = Minimist.parse(
+let parse = Austere.parse(
   ~alias=[("party", "verbose")],
   ~presence=["verbose"],
   ~floats=["frobbles"],
@@ -49,7 +49,7 @@ ensure(switch (parse(["--rename", "a=b", "--rename", "c=d"])) {
 
 ensure(switch (parse(["--boops", "10"])) {
 | Ok({ints}) when get(ints, "boops") == Some(10) => true
-| Error(err) => {print_endline(Minimist.report(err)); false}
+| Error(err) => {Js.log(Austere.report(err)); false}
 | _ => false
 }, "int");
 

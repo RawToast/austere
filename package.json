@@ -1,22 +1,23 @@
 {
-  "name": "minimist.re",
-  "version": "0.0.4",
+  "name": "austere.re",
+  "version": "0.0.5",
   "scripts": {
-    "start": "bsb -make-world -w -backend native",
-    "build": "bsb -make-world -backend native",
+    "start": "bsb -make-world -w",
+    "build": "bsb -make-world",
     "test": "./lib/bs/native/test.native --verbose ./test",
+    "lint": "bsrefmt src/* --in-place",
     "clean": "bsb -clean-world"
   },
   "repository": {
-    "url": "jaredly/minimist.re",
+    "url": "rawtoast/austere",
     "type": "git"
   },
   "keywords": [
     "BuckleScript"
   ],
-  "author": "Jared Forsyth",
+  "author": "RawToast",
   "license": "MIT",
   "devDependencies": {
-    "bs-platform": "bsansouci/bsb-native#2.1.1"
+    "bs-platform": "^5.2.1"
   }
 }
