@@ -5,6 +5,7 @@ which is inspired by [minimist](https://www.npmjs.com/package/minimist) and [yar
 
 Unlike [minimist.re](https://github.com/jaredly/minimist.re), this only targets Javascript/Node and has no bs-native dependency.
 
+## Example
 
 ```reason
 let parse = Austere.parse(~alias=[("h", "help")], ~presence=["help"], ~multi=["rename"], ~strings=["base"]);
